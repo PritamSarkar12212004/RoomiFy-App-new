@@ -1,0 +1,10 @@
+import express from "express";
+import { commentPostController } from "../../../controller/post/controllerPost/commentController.js";
+import getComment from "../../../controller/post/controllerPost/getComment.js";
+import { likeAdder, likeRemover } from "../../../controller/post/controllerPost/likeController.js";
+const router = express.Router();
+router.post("/comment", commentPostController);
+router.post("/comment/get", getComment);
+router.post("/like/add", likeAdder);
+router.post("/like/remove", likeRemover);
+export default router;
